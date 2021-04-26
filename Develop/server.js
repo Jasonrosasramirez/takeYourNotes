@@ -21,3 +21,8 @@ app.use(express.static("public"));
     //  middle function. Serves static files. .static(path, [options])
     //  serves content for the app from the "public" directory in the application directory. 
 
+
+/*  Routers */
+
+require("./routes/apiRoutes")(app);
+    //  Routing refers to how an application’s endpoints (URIs) respond to client requests. http://expressjs.com/en/guide/routing.html#route-paths
