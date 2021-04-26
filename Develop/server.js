@@ -26,3 +26,4 @@ app.use(express.static("public"));
 
 require("./routes/apiRoutes")(app);
     //  Routing refers to how an application’s endpoints (URIs) respond to client requests. http://expressjs.com/en/guide/routing.html#route-paths
+require("./routes/htmlRoutes")(app);
