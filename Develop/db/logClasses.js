@@ -9,14 +9,15 @@ const readFile = util.promisify(fs.readFile);
 
 class Log {
 
-    write(note) {
-        return writeFile("db/db.json", JSON.stringify(note)); // What calls the JSON structure, converts notes into a string. 
-        // (where we are saving, what we are saving)
-    }
-
+ // moving the read method before the write. Let's see if this helps out. 
     read() {
         return readFile("db/db.json", "utf8"); // Encodes what was just written to the UTF-8 format. 
         // (what we want to read, what we want to encode to)
+    }
+
+    write(note) {
+        return writeFile("db/db.json", JSON.stringify(note)); // What calls the JSON structure, converts notes into a string. 
+        // (where we are saving, what we are saving)
     }
 
     getNotes() { 
@@ -41,7 +42,7 @@ class Log {
     }
 
     addNote() {
-        const {title, text } = note;
+        const {title, text} = note;
         const newNote = {title, text, id:uniqid()}; 
 
         return this.getNotes() 
