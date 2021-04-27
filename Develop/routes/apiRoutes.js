@@ -12,6 +12,14 @@ router.get("/api/notes", (req, res) => {
     .then((notes) => {
         return res.json(notes)})
         .catch(err => res.status(500).json(err))
-        
+
 })
 
+
+/*  API POST Request */
+
+router.post("/api/notes", (req, res) => {
+
+    // complete me later on :D 
+
+})
