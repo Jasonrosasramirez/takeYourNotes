@@ -11,7 +11,7 @@ app.use(express.urlencoded({extended: true}));
     //  urlencoded is a built in middleware function based on the body parser. 
     //  extended | This option allows to choose between parsing the URL-encoded data with the querystring library (when false) 
         //  or the qs library (when true). The “extended” syntax allows for rich objects and arrays to be encoded into the URL-encoded format, 
-        //allowing for a JSON-like experience with URL-encoded. http://expressjs.com/en/api.html
+        //  allowing for a JSON-like experience with URL-encoded. http://expressjs.com/en/api.html
 app.use(express.json()); 
     //  the middleware function is executed when the base of the requested path matches path. http://expressjs.com/en/api.html#app.use
     //  in this case, express.json is a callback function. 
@@ -29,7 +29,7 @@ require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 
-/*  Listener */
+/*  Listener    */
 
 app.listen(PORT, () => {
 
