@@ -20,6 +20,11 @@ router.get("/api/notes", (req, res) => {
 
 router.post("/api/notes", (req, res) => {
 
-    // complete me later on :D 
+    log.addNote(req.body)
+    .then(note => {
+        res.json(note)
+        
+    }).catch(err => res.status(500).json(err))
 
 })
+
