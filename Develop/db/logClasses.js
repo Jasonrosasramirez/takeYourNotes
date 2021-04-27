@@ -34,7 +34,7 @@ class Log {
                 
             } 
 
-            return storedNotesArray; // returns whichever happened. Hopefully the best case scenario. 
+            return storedNotesArray; // returns whichever happened. Hopefully the best case scenario (try). 
 
         })
         

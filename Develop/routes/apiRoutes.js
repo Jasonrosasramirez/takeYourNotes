@@ -8,9 +8,10 @@ const path = require("path");
 
 router.get("/api/notes", (req, res) => {
 
-    //log.getNotes().then((notes) =>)
-
-    // getNotes() is coming through incorrrectly for some reason. check the export on logClasses
-
+    log.getNotes()
+    .then((notes) => {
+        return res.json(notes)})
+        .catch(err => res.status(500).json(err))
+        
 })
 
