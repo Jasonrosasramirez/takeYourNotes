@@ -2,6 +2,9 @@
 const http = require("http");
 const fs = require("fs");
 
+const apiRoutes = require("./routes/apiRoutes");
+const htmlRoutes = require("./routes/htmlRoutes");
+
 const express = require("express");
 const app = express();
 
@@ -25,13 +28,10 @@ app.use(express.static("public"));
     //  serves content for the app from the "public" directory in the application directory. 
 
 
-/*  Routers */
+/* Routes  */
 
-require("./routes/apiRoutes")(app);
-    //  Routing refers to how an application’s endpoints (URIs) respond to client requests. http://expressjs.com/en/guide/routing.html#route-paths
-require("./routes/htmlRoutes")(app);
-
-
+app.use("/", htmlRoutes); 
+app.use("/api", apiRoutes);
 
 
 /*  Listener    */ 
