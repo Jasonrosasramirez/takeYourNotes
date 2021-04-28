@@ -10,7 +10,7 @@ router.get("/notes", (req, res) => {
 
 }); 
 
-router.get("*", (req, res) => {
+router.get("/", (req, res) => {
     // if no routes match, then the default is set to home. 
 
     res.sendFile(path.join(__dirname, "../public/index.html"));
