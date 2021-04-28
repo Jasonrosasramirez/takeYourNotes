@@ -1,8 +1,11 @@
 /*  creats an express application.  */  // http://expressjs.com/en/api.html
+const http = require("http");
+const fs = require("fs");
 
 const express = require("express");
-const app = express(); //
-const PORT = process.env.PORT || 3000; // sets up the initial port that will be used.   
+const app = express();
+
+const PORT = 3000; // sets up the initial port that will be used.   
 
 
 /*  setting up the Express app to parse the incoming data.    */  
@@ -29,10 +32,14 @@ require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 
-/*  Listener    */
+
+
+/*  Listener    */ 
+
+const server; // will use the http.createServer
 
 app.listen(PORT, () => {
-
-    console.log("This is your express.js app speaking.\nThe express app is listening on PORT: ${PORT}");
+    // starts the server
+    console.log(`This is your express.js app speaking.\nServer is listening on PORT: ${PORT}`);
 
 }); 
