@@ -1,6 +1,6 @@
 const fs = require("fs"); // grants access to the file system abilities. 
 const util = require("util"); // provides access to some utility functions. https://www.w3schools.com/nodejs/ref_util.asp
-const shortid = require("shortid"); // this package will be used to make unique IDs. https://www.npmjs.com/package/shortid
+//const shortid = require("shortid"); // this package will be used to make unique IDs. https://www.npmjs.com/package/shortid
 const uniqid = require("uniqid"); 
 
 const writeFile = util.promisify(fs.writeFile); // do not use sync version. This is asynchronous. Using sync ruins the promise :(  

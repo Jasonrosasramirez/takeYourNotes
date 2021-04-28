@@ -33,6 +33,6 @@ require("./routes/htmlRoutes")(app);
 
 app.listen(PORT, () => {
 
-    console.log("This is your express.js app speaking.\nThe express app is listening on PORT: " + PORT);
+    console.log("This is your express.js app speaking.\nThe express app is listening on PORT: ${PORT}");
 
 }); 
