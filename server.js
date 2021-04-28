@@ -36,7 +36,7 @@ app.use("/api", apiRoutes);
 
 /*  Listener    */ 
 
-const server; // will use the http.createServer
+
 
 app.listen(PORT, () => {
     // starts the server
