@@ -24,7 +24,7 @@ class Log {
 
         return this.read().then((notes) => { // For this instance, it initiates the read function, then passes the notes. 
 
-            var storedNotesArray; // function scoped. Will be referenced in the try and catch below. 
+            let storedNotesArray; // function scoped. Will be referenced in the try and catch below. 
             
             // https://www.w3schools.com/js/js_errors.asp#:~:text=JavaScript%20try%20and%20catch,occurs%20in%20the%20try%20block.
             try {   // allows for a block of code to be tested for errors while it is being executed. Block of code to try. 
