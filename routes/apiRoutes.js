@@ -6,7 +6,7 @@ const log = require("../db/logClasses.js");
 
 /*      Routing     */
 
-router.get("/api/notes", (req, res) => {
+router.get("/notes", (req, res) => {
 
     log.getNotes()
     .then((notes) => {
@@ -25,7 +25,7 @@ router.get("/api/notes", (req, res) => {
 
 /*  API POST Request */
 
-router.post("/api/notes", (req, res) => {
+router.post("/notes", (req, res) => {
 
     log.addNote(req.body).then(note => {
         res.json(note)}).catch(err => res.status(500).json(err))
