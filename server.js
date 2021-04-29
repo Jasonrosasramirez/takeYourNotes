@@ -36,8 +36,6 @@ app.use("/api", apiRoutes);
 
 /*  Listener    */ 
 
-
-
 app.listen(PORT, () => {
     // starts the server
     console.log(`This is your express.js app speaking.\nServer is listening on PORT: ${PORT}`);

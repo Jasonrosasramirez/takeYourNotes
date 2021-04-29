@@ -1,6 +1,6 @@
 const fs = require("fs");   // file system 
 const router = require("express").Router();
-const log = require("../db/logClasses.js"); 
+var log = require("../db/logClasses.js"); // exported from the logClasses.js 
 
 
 
@@ -33,7 +33,7 @@ router.post("/notes", (req, res) => {
     // accessing logClasses.addNote function 
     // req.body is the request object.
     // returns the response from the server in a json format. 
-    // displays the 500 error if it comes to that.  
+    // displays the 500 error if it comes to that. 
 
 })
 

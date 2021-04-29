@@ -46,12 +46,14 @@ class Log {
         const newNote = {title, text, id:uniqid()}; 
 
         return this.getNotes() 
-        .then((notes) => {[...notes, newNote]})
-        .then((updatedNotes) => {this.write(updatedNotes)})
+        .then((notes) => {
+            [...notes, newNote]
+
+        }).then((updatedNotes) => {this.write(updatedNotes)})
         .then(() => {newNote})
 
     }
 
 }
 
-module.export = new Log(); // exports the Log class file function
+module.export = new Log(); // exports the Log class file function to the apiRoutes
