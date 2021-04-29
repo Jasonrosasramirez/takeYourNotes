@@ -10,8 +10,7 @@ router.get("/api/notes", (req, res) => {
 
     log.getNotes()
     .then((notes) => {
-        return res.json(notes)})
-        .catch(err => res.status(500).json(err))
+        return res.json(notes)}).catch(err => res.status(500).json(err))
 
     // log is the import from logClasses. getNotes is the function we want to call. 
     // .then is the promise with notes from the log classes passed on as the parameter. 
@@ -28,10 +27,8 @@ router.get("/api/notes", (req, res) => {
 
 router.post("/api/notes", (req, res) => {
 
-    log.addNote(req.body)
-    .then(note => {
-        return res.json(note)})
-        .catch(err => res.status(500).json(err))
+    log.addNote(req.body).then(note => {
+        res.json(note)}).catch(err => res.status(500).json(err))
 
     // accessing logClasses.addNote function 
     // req.body is the request object.
